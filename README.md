@@ -14,7 +14,7 @@ toda la información en una base de datos mediante JDBC.
 |---|---|
 | Katty Cai | **Modelo (POO)**: clases `Persona` (abstracta), `Cliente`, `Empleado`, `Producto`, `Venta`, `DetalleVenta`, `Usuario`. Herencia, encapsulamiento, polimorfismo (sobrescritura de método en `Cliente`/`Empleado`). |
 | _Rodrigo Solano_ | **Persistencia (JDBC)**: `ConexionBD`, DAOs (`ClienteDAO`, `EmpleadoDAO`, `ProductoDAO`, `VentaDAO`, `UsuarioDAO`), script SQL de creación de la base de datos. |
-| _Nombre 3_ | **Lógica de negocio**: cálculo de IGV/totales (Math), validaciones de datos (String), colecciones para inventario y detalle de venta, estructuras de control para las reglas del negocio. |
+| _Fabricio Santos_ | **Lógica de negocio**: cálculo de IGV/totales (Math), validaciones de datos (String), colecciones para inventario y detalle de venta, estructuras de control para las reglas del negocio. |
 | _Nombre 4_ | **Setup, interfaz de consola e integración**: configuración inicial del repositorio y del proyecto en IntelliJ (Maven, estructura de carpetas, `.gitignore`), menús por rol (administrador/vendedor), conexión entre vista-modelo-persistencia, pruebas de funcionamiento, y coordinación del README/GitHub/video. |
 
 Todos los integrantes participan también en la revisión cruzada del código y en la sustentación grupal.
