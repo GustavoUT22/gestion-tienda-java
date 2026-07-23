@@ -15,7 +15,7 @@ toda la información en una base de datos mediante JDBC.
 | Katty Cai | **Modelo (POO)**: clases `Persona` (abstracta), `Cliente`, `Empleado`, `Producto`, `Venta`, `DetalleVenta`, `Usuario`. Herencia, encapsulamiento, polimorfismo (sobrescritura de método en `Cliente`/`Empleado`). |
 | _Rodrigo Solano_ | **Persistencia (JDBC)**: `ConexionBD`, DAOs (`ClienteDAO`, `EmpleadoDAO`, `ProductoDAO`, `VentaDAO`, `UsuarioDAO`), script SQL de creación de la base de datos. |
 | _Fabricio Santos_ | **Lógica de negocio**: cálculo de IGV/totales (Math), validaciones de datos (String), colecciones para inventario y detalle de venta, estructuras de control para las reglas del negocio. |
-| _Nombre 4_ | **Setup, interfaz de consola e integración**: configuración inicial del repositorio y del proyecto en IntelliJ (Maven, estructura de carpetas, `.gitignore`), menús por rol (administrador/vendedor), conexión entre vista-modelo-persistencia, pruebas de funcionamiento, y coordinación del README/GitHub/video. |
+| Gustavo Ugarte | **Setup, interfaz de consola e integración**: configuración inicial del repositorio y del proyecto en IntelliJ (Maven, estructura de carpetas, `.gitignore`), menús por rol (administrador/vendedor), conexión entre vista-modelo-persistencia, pruebas de funcionamiento, y coordinación del README/GitHub/video. |
 
 Todos los integrantes participan también en la revisión cruzada del código y en la sustentación grupal.
 
@@ -108,6 +108,39 @@ Cada capa tiene una responsabilidad clara: `model` define las entidades (POO),
   transacción que además descuenta el stock.
 - Consultar el historial de ventas con su detalle y el monto acumulado.
 - Opciones solo para administrador: registrar productos, actualizar stock y listar empleados.
+
+## Evidencias de funcionamiento
+
+### 1. Inicio de sesión y menú según el rol
+
+El usuario `vendedor1` accede correctamente y el menú se genera según su rol: solo
+ve las opciones 1 a 6, sin las de administrador (registrar producto, actualizar
+stock y listar empleados).
+
+![Inicio de sesión](docs/capturas/login-exito.png)
+
+### 2. Listado de productos antes de la venta
+
+Se recuperan los productos desde MySQL. Al momento de la consulta, el Aceite 1L
+(P002) tiene 30 unidades y el Arroz 5kg (P001) tiene 47.
+
+![Listado de productos](docs/capturas/listado-productos.png)
+
+### 3. Registro de una venta con cálculo automático de IGV
+
+Se agregan dos productos al carrito validando el stock disponible en cada paso.
+El sistema calcula subtotal (S/ 469.00), IGV del 18% (S/ 84.42) y total
+(S/ 553.42), y registra la venta dentro de una transacción.
+
+![Registro de venta](docs/capturas/registrar-venta.png)
+
+### 4. Stock actualizado tras la venta
+
+Al volver a listar los productos se comprueba que el stock se descontó en la base
+de datos: el Aceite 1L pasó de 30 a 20 unidades (se vendieron 10) y el Arroz 5kg
+de 47 a 27 (se vendieron 20).
+
+![Stock actualizado](docs/capturas/stock-productos-actualizados.png)
 
 ## Video de exposición
 
