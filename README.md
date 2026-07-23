@@ -144,4 +144,4 @@ de 47 a 27 (se vendieron 20).
 
 ## Video de exposición
 
-Enlace: _pendiente_
+Enlace: https://youtu.be/tdjH8a2wn78
