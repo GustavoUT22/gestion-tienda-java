@@ -1,4 +1,4 @@
-package model;
+package com.lideratec.model;
 
 import java.time.LocalDate;
 

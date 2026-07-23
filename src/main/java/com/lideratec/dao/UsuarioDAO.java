@@ -1,7 +1,7 @@
 package com.lideratec.dao;
 
 import com.lideratec.bd.ConexionBD;
-import model.Usuario;
+import com.lideratec.model.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,6 @@ import java.util.List;
 
 /**
  * DAO (Data Access Object) para la entidad Usuario.
- * Ademas del CRUD basico, incluye un metodo para validar login (RF01).
  */
 public class UsuarioDAO {
 

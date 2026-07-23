@@ -1,4 +1,4 @@
-package model;
+package com.lideratec.model;
 
 public class Usuario {
     private int id;

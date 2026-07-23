@@ -1,7 +1,7 @@
 package com.lideratec.dao;
 
 import com.lideratec.bd.ConexionBD;
-import model.Empleado;
+import com.lideratec.model.Empleado;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,6 @@ import java.util.List;
 
 /**
  * DAO (Data Access Object) para la entidad Empleado.
- * Mismo patron que ClienteDAO: CRUD contra la tabla "empleados".
  */
 public class EmpleadoDAO {
 

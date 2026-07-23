@@ -1,4 +1,4 @@
-package model;
+package com.lideratec.model;
 
 public class DetalleVenta {
     private int id;

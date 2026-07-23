@@ -1,7 +1,7 @@
 package com.lideratec.dao;
 
 import com.lideratec.bd.ConexionBD;
-import model.Producto;
+import com.lideratec.model.Producto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,6 @@ import java.util.List;
 
 /**
  * DAO (Data Access Object) para la entidad Producto.
- * Se encarga de todas las operaciones CRUD contra la tabla "productos".
  */
 public class ProductoDAO {
 

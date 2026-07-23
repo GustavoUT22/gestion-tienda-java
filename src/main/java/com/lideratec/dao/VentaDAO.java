@@ -1,28 +1,21 @@
 package com.lideratec.dao;
 
 import com.lideratec.bd.ConexionBD;
-import model.Cliente;
-import model.DetalleVenta;
-import model.Empleado;
-import model.Producto;
-import model.Venta;
+import com.lideratec.model.Cliente;
+import com.lideratec.model.DetalleVenta;
+import com.lideratec.model.Empleado;
+import com.lideratec.model.Producto;
+import com.lideratec.model.Venta;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * DAO (Data Access Object) para la entidad Venta.
- *
- * A diferencia de los otros DAO, aqui una sola operacion de negocio
- * (registrar una venta) afecta TRES tablas a la vez: ventas, detalle_venta
- * y productos (para descontar stock). Por eso se usa una TRANSACCION:
- * o se guardan todos los cambios juntos (commit), o si algo falla no se
- * guarda nada (rollback), evitando dejar una venta "a medias".
  */
 public class VentaDAO {
 

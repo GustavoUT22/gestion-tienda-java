@@ -1,4 +1,4 @@
-package model;
+package com.lideratec.model;
 
 public abstract class Persona {
     protected int id;

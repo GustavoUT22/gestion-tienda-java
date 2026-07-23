@@ -11,12 +11,15 @@ import java.sql.SQLException;
  */
 public class ConexionBD {
 
-    // --- Ajustar estos datos segun la configuracion local de MySQL --
+    // --- Configuracion de conexion acordada por el equipo ---------------
+    // Todos los integrantes usan las mismas credenciales en su MySQL local
+    // para que este archivo no cambie y no genere conflictos al hacer merge.
+    // Si tu MySQL tiene otro password, cambialo en el motor (no aqui).
     private static final String HOST = "localhost";
     private static final String PUERTO = "3306";
     private static final String BASE_DATOS = "gestion_tienda";
     private static final String USUARIO = "root";
-    private static final String PASSWORD = "3620924a"; // TODO: reemplazar por tu password de MySQL
+    private static final String PASSWORD = "root";
 
     private static final String URL =
             "jdbc:mysql://" + HOST + ":" + PUERTO + "/" + BASE_DATOS +

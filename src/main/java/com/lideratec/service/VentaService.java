@@ -1,4 +1,7 @@
-package model;
+package com.lideratec.service;
+
+import com.lideratec.model.DetalleVenta;
+import com.lideratec.model.Producto;
 
 import java.util.ArrayList;
 
@@ -108,6 +111,14 @@ public class VentaService {
 
     public ArrayList<DetalleVenta> getDetalles() {
         return detalles;
+    }
+
+    /**
+     * Vacia el carrito para poder registrar una venta nueva
+     * sin arrastrar los productos de la venta anterior.
+     */
+    public void limpiar() {
+        detalles.clear();
     }
 
 }
